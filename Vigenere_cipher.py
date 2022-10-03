@@ -28,16 +28,24 @@ def originalText(cipher_text, key):
     return("" . join(orig_text))
      
 # Driver code
+<<<<<<< HEAD
 
 def execution_vigenere():
+=======
+if __name__ == "__main__":
+>>>>>>> a2a53282e0a4ca11783ba9df9914adc35774580f
     string = input("Masukan Plain Text : ")
     keyword = input("Masukan Kunci : ")
     key = generateKey(string, keyword)
     cipher_text = cipherText(string,key)
     print("Ciphertext :", cipher_text)
     print("Original/Decrypted Text :",
+<<<<<<< HEAD
     originalText(cipher_text, key))
     
 #if __name__ == "__main__":
     
+=======
+           originalText(cipher_text, key))
+>>>>>>> a2a53282e0a4ca11783ba9df9914adc35774580f
  
