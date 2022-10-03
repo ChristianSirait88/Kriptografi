@@ -1,3 +1,10 @@
+from cgitb import text
+from random import randint, random
+import string
+from time import sleep
+
+alphabet = string.ascii_lowercase
+
 def enkripsi(text,s):
     hasil = ""
  
@@ -14,15 +21,35 @@ def enkripsi(text,s):
             hasil += chr((ord(char) + s - 97) % 26 + 97)
  
     return hasil
- 
+
+def decrypt():
+    print("Decrypt Caesar Chiper")
+    kalimat = input("Masukan Encrypted Text : ")
+    key = int(input("Masukan Kunci : "))
+    encrypted_message = kalimat.lower()
+    decrypted_message = ""
+
+    for c in encrypted_message:
+
+        if c in alphabet:
+            position = alphabet.find(c)
+            new_position = (position - key) % 26
+            new_character = alphabet[new_position]
+            decrypted_message += new_character
+        else:
+            decrypted_message += c
+
+    print("Pesan Anda : ")
+    print(decrypted_message)
 
 def main():
-    text = "ZBELAJARKRIPTOGRAFIUNTUKINDONESIA"
-    s = 4
+    text = input("Masukan plain text: ")
+    s = randint(1,26)
     print ("Text  : " + text)
     print ("Shift : " + str(s))
     print ("Cipher: " + enkripsi(text,s))
-    
+    print("\n")
+    decrypt()
     
 if __name__ == "__main__":
     main()
