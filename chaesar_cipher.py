@@ -44,7 +44,7 @@ def decrypt():
 
 def main():
     text = input("Masukan plain text: ")
-    s = randint(1,26)
+    s = 24
     print ("Text  : " + text)
     print ("Shift : " + str(s))
     print ("Cipher: " + enkripsi(text,s))
