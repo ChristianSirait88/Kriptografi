@@ -5,11 +5,7 @@ from time import sleep
 
 alphabet = string.ascii_lowercase
 
-<<<<<<< HEAD
 def enkripsi_chaesar(text,s):
-=======
-def enkripsi(text,s):
->>>>>>> a2a53282e0a4ca11783ba9df9914adc35774580f
     hasil = ""
  
     for i in range(len(text)):
@@ -25,7 +21,6 @@ def enkripsi(text,s):
             hasil += chr((ord(char) + s - 97) % 26 + 97)
  
     return hasil
-<<<<<<< HEAD
 
 def decrypt_chaesar():
     print("Decrypt Caesar Chiper")
@@ -48,43 +43,13 @@ def decrypt_chaesar():
     print(decrypted_message)
 
 def execution_chaesar():
-=======
-
-def decrypt():
-    print("Decrypt Caesar Chiper")
-    kalimat = input("Masukan Encrypted Text : ")
-    key = int(input("Masukan Kunci : "))
-    encrypted_message = kalimat.lower()
-    decrypted_message = ""
-
-    for c in encrypted_message:
-
-        if c in alphabet:
-            position = alphabet.find(c)
-            new_position = (position - key) % 26
-            new_character = alphabet[new_position]
-            decrypted_message += new_character
-        else:
-            decrypted_message += c
-
-    print("Pesan Anda : ")
-    print(decrypted_message)
-
-def main():
->>>>>>> a2a53282e0a4ca11783ba9df9914adc35774580f
     text = input("Masukan plain text: ")
     s = randint(1,26)
     print ("Text  : " + text)
     print ("Shift : " + str(s))
-<<<<<<< HEAD
     print ("Cipher: " + enkripsi_chaesar(text,s))
     print("\n")
     
-=======
-    print ("Cipher: " + enkripsi(text,s))
-    print("\n")
-    decrypt()
->>>>>>> a2a53282e0a4ca11783ba9df9914adc35774580f
     
 def execution_chaesar_decrypt():
     decrypt_chaesar()

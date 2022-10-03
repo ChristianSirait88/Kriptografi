@@ -12,12 +12,12 @@ def menu_2():
     return y
 
 def menu():
-    x_inp= input("====> ");
+    x_inp= input("====> ")
     x = int(x_inp)
     
     match x:
         case 1:
-            answer = menu_2();
+            answer = menu_2()
             if answer == 1:
                 execution_chaesar()
             else:
